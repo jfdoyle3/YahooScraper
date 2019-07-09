@@ -9,21 +9,22 @@
 <p>Add ?name=*name*&numtimes=*number*</p>
 
 <ul>
-    @{ 
+    @{
 
-    
+
         for (int i = 1; i < ViewBag.NumTimes; i++)
         {
 
-       
-            if(i % 2 == 0)
-             {
-                <li><strong>Even</strong> Row</li>
-             }
+
+            if (i % 2 == 0)
+            {
+
+                <li>@ViewBag.Message</li>
+            }
 
             else
             {
-                <li>@ViewBag.Message</li>
+                <li><strong>Even</strong> Row</li>
             }
 
         }

@@ -7,7 +7,7 @@ using HtmlAgilityPack;
 using System.Linq;
 
 
-namespace ConsoleScraper
+namespace YahooScraper
 {
     public class YahooFinance
     {
