@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using YahooScraper.Scraper;
 
 namespace YahooScraper.Controllers
 {
@@ -24,6 +25,22 @@ namespace YahooScraper.Controllers
             ViewBag.NumTimes = numTimes;
 
             return View();
+        }
+        public ActionResult CProg()
+        {
+            ViewBag.Message="ViewBag";
+
+            return View();
+        }
+
+        public ActionResult Scrape()
+        {
+            YahooFinance webPage = new YahooFinance();
+            List<List<string>> stockTable = webPage.Login();
+
+            FinanceTable.ScrapeToDatabase(stockTable);
+            ViewBag.Message = "All Data Scraped";
+            return View(); 
         }
     }
 }
