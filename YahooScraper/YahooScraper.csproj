@@ -355,7 +355,7 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\HelloWorld\CProg.cshtml" />
-    <Content Include="Views\HelloWorld\Scrape.cshtml" />
+    <Content Include="Views\StockTables\Scrape.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

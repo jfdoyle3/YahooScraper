@@ -32,15 +32,5 @@ namespace YahooScraper.Controllers
 
             return View();
         }
-
-        public ActionResult Scrape()
-        {
-            YahooFinance webPage = new YahooFinance();
-            List<List<string>> stockTable = webPage.Login();
-
-            FinanceTable.ScrapeToDatabase(stockTable);
-            ViewBag.Message = "All Data Scraped";
-            return View(); 
-        }
     }
 }
