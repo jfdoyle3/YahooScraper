@@ -7,7 +7,7 @@ using System.Linq;
 using System.Data;
 
 
-namespace YahooScraper
+namespace YahooScraper.Scraper
 {
     public class FromFile
     {

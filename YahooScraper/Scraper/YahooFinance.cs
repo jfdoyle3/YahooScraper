@@ -7,14 +7,18 @@ using HtmlAgilityPack;
 using System.Linq;
 
 
-namespace YahooScraper
+namespace YahooScraper.Scraper
 {
     public class YahooFinance
     {
 
        public  List<List<string>> Login()
         {
-            using (IWebDriver driver = new ChromeDriver())
+            ChromeOptions option = new ChromeOptions();
+            option.AddArgument("--headless");
+            option.AddArgument("window-size=1200,1100");
+
+            using (IWebDriver driver = new ChromeDriver(option))
             {
                 driver.Navigate().GoToUrl("https://finance.yahoo.com");
 
