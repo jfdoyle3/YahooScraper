@@ -131,7 +131,7 @@ namespace YahooScraper.Controllers
             List<List<string>> stockTable = webPage.Login();
 
             FinanceTable.ScrapeToDatabase(stockTable);
-            ViewBag.Message = "All Data Scraped";
+            ViewBag.Message = "Stock Table scraped into Database";
             return View();
         }
     }

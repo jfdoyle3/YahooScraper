@@ -60,8 +60,8 @@ namespace YahooScraper.Scraper
                                                             .Skip(1)
                                                             .Where(tr => tr.Elements("td").Count()>1)
                                                             .Select(tr => tr.Elements("td").Select(td => td.InnerText.Trim()).ToList())
-                                                            .ToList();           
-
+                                                            .ToList();
+                driver.Quit();
                    return stockTable;
                 }
             }
