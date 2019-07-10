@@ -35,11 +35,11 @@ namespace YahooScraper.Controllers
 
         public ActionResult Scrape()
         {
-            YahooFinance scrape = new YahooFinance();
-            List<List<string>> stockTable = scrape.Login();
+            YahooFinance webPage = new YahooFinance();
+            List<List<string>> stockTable = webPage.Login();
 
-            // FinanceTable.ScrapeToDatabase(stockTable);
-
+            FinanceTable.ScrapeToDatabase(stockTable);
+            ViewBag.Message = "All Data Scraped";
             return View(); 
         }
     }

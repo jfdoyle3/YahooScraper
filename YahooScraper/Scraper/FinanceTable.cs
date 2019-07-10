@@ -36,7 +36,7 @@ namespace YahooScraper.Scraper
                     db.SaveChanges();
                 }
 
-                Console.WriteLine("\n\nStock data entered into the database.");
+               // Console.WriteLine("\n\nStock data entered into the database.");
 
             }
         }
