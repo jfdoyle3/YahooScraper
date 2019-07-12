@@ -17,7 +17,7 @@ namespace YahooScraper.Controllers
         private StocksContext db = new StocksContext();
 
         // GET: StockTables
-        public async Task<ActionResult> Index()
+        public async Task<ActionResult> ViewTable()
         {
             return View(await db.StockTables.ToListAsync());
         }

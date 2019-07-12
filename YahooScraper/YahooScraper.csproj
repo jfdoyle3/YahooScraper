@@ -342,7 +342,7 @@
     <Content Include="Views\StockTables\Delete.cshtml" />
     <Content Include="Views\StockTables\Details.cshtml" />
     <Content Include="Views\StockTables\Edit.cshtml" />
-    <Content Include="Views\StockTables\Index.cshtml" />
+    <Content Include="Views\StockTables\ViewTable.cshtml" />
     <Content Include="Views\HelloWorld\Index.cshtml" />
     <Content Include="Views\HelloWorld\Welcome.cshtml" />
     <Content Include="Scripts\umd\popper.min.js.map" />
