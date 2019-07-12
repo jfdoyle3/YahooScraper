@@ -62,7 +62,7 @@ namespace YahooScraper.Scraper
                                                             .Select(tr => tr.Elements("td").Select(td => td.InnerText.Trim()).ToList())
                                                             .ToList();
                 driver.Quit();
-                   return stockTable;
+                return stockTable;
                 }
             }
        }
