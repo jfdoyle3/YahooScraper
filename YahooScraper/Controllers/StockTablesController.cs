@@ -8,6 +8,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using YahooScraper.Models;
+using YahooScraper.Scraper;
 
 namespace YahooScraper.Controllers
 {
@@ -16,7 +17,7 @@ namespace YahooScraper.Controllers
         private StocksContext db = new StocksContext();
 
         // GET: StockTables
-        public async Task<ActionResult> Index()
+        public async Task<ActionResult> ViewTable()
         {
             return View(await db.StockTables.ToListAsync());
         }
@@ -123,6 +124,15 @@ namespace YahooScraper.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+        public ActionResult Scrape()
+        {
+            YahooFinance webPage = new YahooFinance();
+            List<List<string>> stockTable = webPage.Login();
+
+            FinanceTable.ScrapeToDatabase(stockTable);
+            ViewBag.Message = "Stock Table scraped into Database";
+            return View();
         }
     }
 }

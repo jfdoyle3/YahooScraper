@@ -342,7 +342,7 @@
     <Content Include="Views\StockTables\Delete.cshtml" />
     <Content Include="Views\StockTables\Details.cshtml" />
     <Content Include="Views\StockTables\Edit.cshtml" />
-    <Content Include="Views\StockTables\Index.cshtml" />
+    <Content Include="Views\StockTables\ViewTable.cshtml" />
     <Content Include="Views\HelloWorld\Index.cshtml" />
     <Content Include="Views\HelloWorld\Welcome.cshtml" />
     <Content Include="Scripts\umd\popper.min.js.map" />
@@ -355,7 +355,8 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\HelloWorld\CProg.cshtml" />
-    <Content Include="Views\HelloWorld\Scrape.cshtml" />
+    <Content Include="Views\StockTables\Scrape.cshtml" />
+    <Content Include="Views\Shared\_HeaderNavBar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
