@@ -8,23 +8,24 @@
 
 <p>Hello from our View Template!</p>
 
-<h1>Razor syntax demo</h1>
+<div>
+    <h1>Razor syntax demo</h1>
 
-<h2>@DateTime.Now.ToShortDateString()</h2>
+    <h2>@DateTime.Now.ToShortDateString()</h2>
 
-@{
-    string date = DateTime.Now.ToShortDateString();
-    string message = "Hello World";
-}
+    @{
+        string date = DateTime.Now.ToShortDateString();
+        string message = "Hello World";
+    }
 
-<h2>Today's date is: @date </h2>
-<h3>@message</h3>
+    <h2>Today's date is: @date </h2>
+    <h3>@message</h3>
 
-@{
-    string date2 = DateTime.Now.ToShortDateString();
-    string message2 = "Hello World!";
-    @:Today's date is: @date2 <br />
-    @message2
-}
-
+    @{
+        string date2 = DateTime.Now.ToShortDateString();
+        string message2 = "Hello World!";
+        @:Today's date is: @date2 <br />
+        @message2
+    }
+</div>
 <button>Click</button>
