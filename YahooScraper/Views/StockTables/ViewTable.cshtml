@@ -4,9 +4,9 @@
     ViewBag.Title = "Stock Scraped Data";
 }
 
-    <h2>Stock Scraped Data</h2>
+<h2>Stock Scraped Data</h2>
 
-
+<input type="button" value="Scrape" onclick="location.href='@Url.Action("Scrape","StockTables")'" />
 <table class="table table-sm table-striped">
     <tr>
         <th>
@@ -42,40 +42,41 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateStamp)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Symbol)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LastPrice)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Change)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ChgPc)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Currency)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MarketTime)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Volume)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AvgVol3m)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MarketCap)
-        </td>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateStamp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Symbol)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Change)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChgPc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Currency)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MarketTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Volume)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AvgVol3m)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MarketCap)
+            </td>
 
-    </tr>
-}
+        </tr>
+    }
 
 </table>
