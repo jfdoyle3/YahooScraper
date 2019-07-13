@@ -1,22 +1,22 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Yahoo Scraper Portal Page";
 }
 
 <div class="jumbotron">
-   <h1> Scraper Login</h1>
+   <h1 style="text-align:center">Yahoo Financial Scraper</h1>
 </div>
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>area 1</p>
+       
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-       <p> area 2</p>
+       
+        <input type="button" value="Register" onclick="location.href='@Url.Action("Register","Account")'" />
+        <input type="button" value="Login" onclick="location.href='@Url.Action("Login","Account")'" />
+
     </div>
     <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>area 3</p>
+       
     </div>
 </div>
