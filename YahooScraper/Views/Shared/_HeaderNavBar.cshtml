@@ -14,7 +14,7 @@
                 <li class="nav-item">@Html.ActionLink("CProg", "Cprog", "HelloWorld", null, new { @class = "nav-link" })</li>
                 <li class="nav-item">@Html.ActionLink("View Data", "ViewTable", "StockTables", null, new { @class = "nav-link" })</li>
                 <li class="nav-item">@Html.ActionLink("Scrape Data", "Scrape", "StockTables", null, new { @class = "nav-link" })</li>
-                @*<li class="nav-item dropdown">
+                <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Home
                     </a>
@@ -41,12 +41,12 @@
                         scrape
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">View Data</a>
+                        <a class="dropdown-item" href="'@Url.Action("ViewTable","StockTables")'">View Data</a>
                         <a class="dropdown-item" href="#">Another action</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Something else here</a>
                     </div>
-                </li>*@
+                </li>
             </ul>
             @Html.Partial("_LoginPartial")
         </div>
