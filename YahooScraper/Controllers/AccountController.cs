@@ -449,7 +449,8 @@ namespace YahooScraper.Controllers
             {
                 return Redirect(returnUrl);
             }
-            return RedirectToAction("Index", "Home");
+           return RedirectToAction("Index", "Home");
+           // return RedirectToAction("ViewTable", "StockTables");
         }
 
         internal class ChallengeResult : HttpUnauthorizedResult
