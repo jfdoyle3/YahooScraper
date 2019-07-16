@@ -131,8 +131,21 @@ namespace YahooScraper.Controllers
             List<List<string>> stockTable = webPage.Login();
 
             FinanceTable.ScrapeToDatabase(stockTable);
-            ViewBag.Message = "Stock Table scraped into Database";
+
+            int maxId = db.StockTables.Max(p => p.ID);
+
+            ViewBag.Message = maxId + " Stocks scraped into Database";
+
             return View();
         }
+        public async Task<ActionResult> History()
+        {
+            return View(await db.StockTables.ToListAsync());
+        }
+        public ActionResult Reset()
+        {
+            return View();
+        }
+
     }
 }

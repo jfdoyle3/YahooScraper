@@ -1,4 +1,4 @@
-﻿using System;
+﻿  using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -35,9 +35,6 @@ namespace YahooScraper.Scraper
                     db.StockTables.Add(stockTable);
                     db.SaveChanges();
                 }
-
-               // Console.WriteLine("\n\nStock data entered into the database.");
-
             }
         }
     }

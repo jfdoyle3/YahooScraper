@@ -1,0 +1,1 @@
+﻿DBCC CHECKIDENT (StockTable, RESEED, 0)
