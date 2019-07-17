@@ -130,11 +130,13 @@ namespace YahooScraper.Controllers
             YahooFinance webPage = new YahooFinance();
             List<List<string>> stockTable = webPage.Login();
 
+            ViewBag.stockTable = stockTable;
+
             FinanceTable.ScrapeToDatabase(stockTable);
 
-            int maxId = db.StockTables.Max(p => p.ID);
+            //int maxId = db.StockTables.Max(p => p.ID);
 
-            ViewBag.Message = maxId + " Stocks scraped into Database";
+            //ViewBag.Message = maxId + " Stocks scraped into Database";
 
             return View();
         }

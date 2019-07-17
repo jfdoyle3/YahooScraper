@@ -1,0 +1,2 @@
+﻿DELETE FROM StockTable;
+DBCC CHECKIDENT (StockTable, RESEED, 0);

@@ -1,12 +1,87 @@
-﻿
+﻿@model IEnumerable<YahooScraper.Models.StockTable>
 @{
     ViewBag.Title = "Scrape";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 
-<h3>@ViewBag.Message</h3>
+<h2>Current Scrape</h2>
 
+<hr />
+<div class="container">
+    <table class="table table-sm table-striped">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DateStamp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Symbol)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Change)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ChgPc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Currency)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MarketTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Volume)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AvgVol3m)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MarketCap)
+            </th>
+            <th></th>
+        </tr>
 
+        @{
 
-<p>Click on View Data new data. scroll to the bottom</p>
+            for (int row = 0; row < ViewBag.stockTable.Count; row++)
+            {
+                <tr>
+                    <td>
+                        @DateTime.Now
+                    </td>
+                    <td>
+                        @ViewBag.stockTable[row][0]
+                    </td>
+                    <td>
+                        @ViewBag.stockTable[row][1]
+                    </td>
+                    <td>
+                        @ViewBag.stockTable[row][2]
+                    </td>
+                    <td>
+                        @ViewBag.stockTable[row][3]
+                    </td>
+                    <td>
+                        @ViewBag.stockTable[row][4]
+                    </td>
+                    <td>
+                        @ViewBag.stockTable[row][5]
+                    </td>
+                    <td>
+                        @ViewBag.stockTable[row][6]
+                    </td>
+                    <td>
+                        @ViewBag.stockTable[row][8]
+                    </td>
+                    <td>
+                        @ViewBag.stockTable[row][12]
+                    </td>
+
+                </tr>
+            }
+        }
+    </table>
+</div>
