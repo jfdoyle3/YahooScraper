@@ -6,7 +6,10 @@
 
 
 <h2>Current Scrape</h2>
-
+<div class="container">
+    <input type="submit" class="btn btn-secondary" value="Scrape" onclick="location.href='@Url.Action("Scrape","StockTables")'" />
+    <input type="submit" class="btn btn-secondary" value="History" onclick="location.href='@Url.Action("History","StockTables")'" />
+</div>
 <hr />
 <div class="container">
     <table class="table table-sm table-striped">
@@ -45,7 +48,6 @@
         </tr>
 
         @{
-
             for (int row = 0; row < ViewBag.stockTable.Count; row++)
             {
                 <tr>
