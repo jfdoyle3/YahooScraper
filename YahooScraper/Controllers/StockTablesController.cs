@@ -127,10 +127,15 @@ namespace YahooScraper.Controllers
         }
         public ActionResult Scrape()
         {
+            ViewBag.scrapeStart = "Scraping Plase Wait...";
+
             YahooFinance webPage = new YahooFinance();
             List<List<string>> stockTable = webPage.Login();
+            //FromFile scrape = new FromFile();
+            //List<List<string>> stockTable = scrape.ReadFile();
 
             ViewBag.stockTable = stockTable;
+            ViewBag.scrapeDone = "Done";
 
             FinanceTable.ScrapeToDatabase(stockTable);
 
@@ -146,7 +151,12 @@ namespace YahooScraper.Controllers
         }
         public ActionResult Reset()
         {
-            return View();
+            string query = "DELETE FROM StockTable;" +
+                           "DBCC CHECKIDENT(StockTable, RESEED, 0);";
+
+            db.Database.ExecuteSqlCommand(query);
+
+            return RedirectToAction("ViewTable");
         }
 
     }
