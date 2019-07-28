@@ -353,7 +353,6 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\StockTables\ViewTable.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\StockTables\Reset.cshtml" />
     <Content Include="Views\StockTables\Scrape.cshtml" />
   </ItemGroup>
   <ItemGroup>
