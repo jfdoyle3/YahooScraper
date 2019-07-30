@@ -125,7 +125,7 @@ namespace YahooScraper.Controllers
             }
             base.Dispose(disposing);
         }
-        public ActionResult RunScrape()
+        public ActionResult Scrape()
         {
             ViewBag.scrapeStart = "Scraping Plase Wait...";
 
@@ -143,16 +143,14 @@ namespace YahooScraper.Controllers
 
             //ViewBag.Message = maxId + " Stocks scraped into Database";
 
-            return RedirectToAction("Scrape");
+            return View();
         }
         public async Task<ActionResult> History()
         {
             return View(await db.StockTables.ToListAsync());
         }
-        public ActionResult Scrape()
-        {
-            return View();
-        }
+     
+     
         public ActionResult Reset()
         {
             string query = "DELETE FROM StockTable;" +

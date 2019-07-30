@@ -5,85 +5,87 @@
 }
 
 
+
 <h2>Current Scrape</h2>
-<div class="container">
-    <input type="submit" class="btn btn-secondary" value="Scrape" onclick="location.href='@Url.Action("RunScrape","StockTables")'" />
-    <input type="submit" class="btn btn-secondary" value="History" onclick="location.href='@Url.Action("History","StockTables")'" />
-</div>
+
 <hr />
 <div class="container">
-    <table class="table table-sm table-striped">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.DateStamp)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Symbol)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.LastPrice)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Change)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ChgPc)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Currency)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MarketTime)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Volume)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AvgVol3m)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MarketCap)
-            </th>
-            <th></th>
-        </tr>
+    <input type="submit" class="btn btn-secondary" value="Scrape" onclick="location.href='@Url.Action("Scrape","StockTables")'" />
+    <input type="submit" class="btn btn-secondary" value="History" onclick="location.href='@Url.Action("History","StockTables")'" />
+</div>   
+    <div class="container">
 
-        @{
-            for (int row = 0; row < ViewBag.stockTable.Count; row++)
-            {
-                <tr>
-                    <td>
-                        @DateTime.Now
-                    </td>
-                    <td>
-                        @ViewBag.stockTable[row][0]
-                    </td>
-                    <td>
-                        @ViewBag.stockTable[row][1]
-                    </td>
-                    <td>
-                        @ViewBag.stockTable[row][2]
-                    </td>
-                    <td>
-                        @ViewBag.stockTable[row][3]
-                    </td>
-                    <td>
-                        @ViewBag.stockTable[row][4]
-                    </td>
-                    <td>
-                        @ViewBag.stockTable[row][5]
-                    </td>
-                    <td>
-                        @ViewBag.stockTable[row][6]
-                    </td>
-                    <td>
-                        @ViewBag.stockTable[row][8]
-                    </td>
-                    <td>
-                        @ViewBag.stockTable[row][12]
-                    </td>
+        <table class="table table-sm table-striped">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.DateStamp)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Symbol)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LastPrice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Change)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ChgPc)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Currency)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MarketTime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Volume)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AvgVol3m)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MarketCap)
+                </th>
+                <th></th>
+            </tr>
 
-                </tr>
+            @{
+                for (int row = 0; row < ViewBag.stockTable.Count; row++)
+                {
+                    <tr>
+                        <td>
+                            @DateTime.Now
+                        </td>
+                        <td>
+                            @ViewBag.stockTable[row][0]
+                        </td>
+                        <td>
+                            @ViewBag.stockTable[row][1]
+                        </td>
+                        <td>
+                            @ViewBag.stockTable[row][2]
+                        </td>
+                        <td>
+                            @ViewBag.stockTable[row][3]
+                        </td>
+                        <td>
+                            @ViewBag.stockTable[row][4]
+                        </td>
+                        <td>
+                            @ViewBag.stockTable[row][5]
+                        </td>
+                        <td>
+                            @ViewBag.stockTable[row][6]
+                        </td>
+                        <td>
+                            @ViewBag.stockTable[row][8]
+                        </td>
+                        <td>
+                            @ViewBag.stockTable[row][12]
+                        </td>
+                    </tr>
+                }
             }
-        }
-    </table>
-</div>
+        </table>
+    </div>
