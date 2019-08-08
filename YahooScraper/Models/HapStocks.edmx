@@ -15,11 +15,11 @@
           <Property Name="LastPrice" Type="nvarchar" MaxLength="50" />
           <Property Name="Change" Type="nvarchar" MaxLength="50" />
           <Property Name="ChgPc" Type="nvarchar" MaxLength="50" />
-          <Property Name="Currency" Type="nvarchar" MaxLength="50" />
           <Property Name="MarketTime" Type="nvarchar" MaxLength="50" />
           <Property Name="Volume" Type="nvarchar" MaxLength="50" />
           <Property Name="AvgVol3m" Type="nvarchar" MaxLength="50" />
           <Property Name="MarketCap" Type="nvarchar" MaxLength="50" />
+          <Property Name="Method" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityContainer Name="StocksModelStoreContainer">
           <EntitySet Name="StockTable" EntityType="Self.StockTable" Schema="dbo" store:Type="Tables" />
@@ -39,13 +39,13 @@
           <Property Name="LastPrice" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Change" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="ChgPc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Currency" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="MarketTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Volume" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="AvgVol3m" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="MarketCap" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Method" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityContainer Name="StocksContext" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="HapStocksContext" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="StockTables" EntityType="Self.StockTable" />
         </EntityContainer>
       </Schema>
@@ -53,7 +53,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="StocksModelStoreContainer" CdmEntityContainer="StocksContext">
+        <EntityContainerMapping StorageEntityContainer="StocksModelStoreContainer" CdmEntityContainer="HapStocksContext">
           <EntitySetMapping Name="StockTables">
             <EntityTypeMapping TypeName="StocksModel.StockTable">
               <MappingFragment StoreEntitySet="StockTable">
@@ -63,11 +63,11 @@
                 <ScalarProperty Name="LastPrice" ColumnName="LastPrice" />
                 <ScalarProperty Name="Change" ColumnName="Change" />
                 <ScalarProperty Name="ChgPc" ColumnName="ChgPc" />
-                <ScalarProperty Name="Currency" ColumnName="Currency" />
                 <ScalarProperty Name="MarketTime" ColumnName="MarketTime" />
                 <ScalarProperty Name="Volume" ColumnName="Volume" />
                 <ScalarProperty Name="AvgVol3m" ColumnName="AvgVol3m" />
                 <ScalarProperty Name="MarketCap" ColumnName="MarketCap" />
+                <ScalarProperty Name="Method" ColumnName="Method" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

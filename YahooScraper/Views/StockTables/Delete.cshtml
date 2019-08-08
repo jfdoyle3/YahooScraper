@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Delete</h2>
@@ -52,14 +53,6 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Currency)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Currency)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.MarketTime)
         </dt>
 
@@ -91,13 +84,21 @@
             @Html.DisplayFor(model => model.MarketCap)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.Method)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Method)
+        </dd>
+
     </dl>
 
     @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-secondary" /> |
+            <input type="submit" value="Delete" class="btn btn-default" /> |
             @Html.ActionLink("Back to List", "Index")
         </div>
     }

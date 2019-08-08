@@ -13,10 +13,10 @@ namespace YahooScraper.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class StocksContext : DbContext
+    public partial class HapStocksContext : DbContext
     {
-        public StocksContext()
-            : base("name=StocksContext")
+        public HapStocksContext()
+            : base("name=HapStocksContext")
         {
         }
     

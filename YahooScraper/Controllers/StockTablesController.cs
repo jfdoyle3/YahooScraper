@@ -14,10 +14,10 @@ namespace YahooScraper.Controllers
 {
     public class StockTablesController : Controller
     {
-        private StocksContext db = new StocksContext();
+        private HapStocksContext db = new HapStocksContext();
 
         // GET: StockTables
-        public async Task<ActionResult> ViewTable()
+        public async Task<ActionResult> Index()
         {
             return View(await db.StockTables.ToListAsync());
         }
@@ -48,7 +48,7 @@ namespace YahooScraper.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "ID,DateStamp,Symbol,LastPrice,Change,ChgPc,Currency,MarketTime,Volume,AvgVol3m,MarketCap")] StockTable stockTable)
+        public async Task<ActionResult> Create([Bind(Include = "ID,DateStamp,Symbol,LastPrice,Change,ChgPc,MarketTime,Volume,AvgVol3m,MarketCap,Method")] StockTable stockTable)
         {
             if (ModelState.IsValid)
             {
@@ -80,7 +80,7 @@ namespace YahooScraper.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "ID,DateStamp,Symbol,LastPrice,Change,ChgPc,Currency,MarketTime,Volume,AvgVol3m,MarketCap")] StockTable stockTable)
+        public async Task<ActionResult> Edit([Bind(Include = "ID,DateStamp,Symbol,LastPrice,Change,ChgPc,MarketTime,Volume,AvgVol3m,MarketCap,Method")] StockTable stockTable)
         {
             if (ModelState.IsValid)
             {
@@ -125,12 +125,15 @@ namespace YahooScraper.Controllers
             }
             base.Dispose(disposing);
         }
+             [Authorize]
         public ActionResult Scrape()
         {
             ViewBag.scrapeStart = "Scraping Plase Wait...";
 
             YahooFinance webPage = new YahooFinance();
             List<List<string>> stockTable = webPage.Login();
+
+
             //FromFile scrape = new FromFile();
             //List<List<string>> stockTable = scrape.ReadFile();
 
@@ -149,8 +152,8 @@ namespace YahooScraper.Controllers
         {
             return View(await db.StockTables.ToListAsync());
         }
-     
-     
+
+
         public ActionResult Reset()
         {
             string query = "DELETE FROM StockTable;" +
@@ -163,3 +166,4 @@ namespace YahooScraper.Controllers
 
     }
 }
+

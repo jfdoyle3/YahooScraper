@@ -29,9 +29,6 @@
                 @Html.DisplayNameFor(model => model.ChgPc)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Currency)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.MarketTime)
             </th>
             <th>
@@ -43,44 +40,46 @@
             <th>
                 @Html.DisplayNameFor(model => model.MarketCap)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Method)
+            </th>
             <th></th>
         </tr>
 
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DateStamp)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Symbol)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.LastPrice)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Change)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ChgPc)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Currency)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.MarketTime)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Volume)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AvgVol3m)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.MarketCap)
-                </td>
-
-            </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateStamp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Symbol)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Change)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChgPc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MarketTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Volume)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AvgVol3m)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MarketCap)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Method)
+        </td>
+    </tr>
         }
 
     </table>
