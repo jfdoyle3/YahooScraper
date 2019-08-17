@@ -5,9 +5,12 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
-
-
+<h2>Stock Scraped Data</h2>
+<div class="container">
+    <input type="submit" class="btn btn-secondary" value="Scrape" onclick="location.href='@Url.Action("Scrape","StockTables")'" />
+    <input type="submit" class="btn btn-secondary" value="History" onclick="location.href='@Url.Action("History","StockTables")'" />
+</div>
+<hr />
 <table class="table">
     <tr>
         <th>
@@ -43,39 +46,40 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateStamp)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Symbol)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LastPrice)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Change)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ChgPc)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MarketTime)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Volume)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AvgVol3m)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MarketCap)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Method)
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateStamp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Symbol)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Change)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChgPc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MarketTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Volume)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AvgVol3m)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MarketCap)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Method)
+            </td>
+        </tr>
+    }
 
 </table>
