@@ -1,7 +1,8 @@
 ﻿@model IEnumerable<YahooScraper.Models.StockTable>
 
 @{
-    ViewBag.Title = "Stock Scraped Data";
+    ViewBag.Title = "ViewTable";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Stock Scraped Data</h2>
@@ -10,77 +11,75 @@
     <input type="submit" class="btn btn-secondary" value="History" onclick="location.href='@Url.Action("History","StockTables")'" />
 </div>
 <hr />
-<div class="container">
-    <table class="table table-sm table-striped">
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DateStamp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Symbol)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Change)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChgPc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MarketTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Volume)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AvgVol3m)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MarketCap)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Method)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.DateStamp)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Symbol)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.LastPrice)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Change)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ChgPc)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MarketTime)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Volume)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AvgVol3m)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MarketCap)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Method)
-            </th>
-            <th></th>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateStamp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Symbol)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Change)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChgPc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MarketTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Volume)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AvgVol3m)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MarketCap)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Method)
+            </td>
         </tr>
+    }
 
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DateStamp)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Symbol)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.LastPrice)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Change)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ChgPc)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.MarketTime)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Volume)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AvgVol3m)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.MarketCap)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Method)
-                </td>
-            </tr>
-        }
-
-    </table>
-</div>
+</table>

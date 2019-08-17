@@ -47,7 +47,6 @@
                 <th>
                     @Html.DisplayNameFor(model => model.Method)
                 </th>
-                <th></th>
             </tr>
 
             @{
@@ -70,9 +69,6 @@
                             @ViewBag.stockTable[row][3]
                         </td>
                         <td>
-                            @ViewBag.stockTable[row][4]
-                        </td>
-                        <td>
                             @ViewBag.stockTable[row][5]
                         </td>
                         <td>
@@ -83,6 +79,9 @@
                         </td>
                         <td>
                             @ViewBag.stockTable[row][12]
+                        </td>
+                        <td>
+                            @ViewBag.scrapeMethod
                         </td>
                     </tr>
                 }

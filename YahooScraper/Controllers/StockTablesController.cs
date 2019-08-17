@@ -163,6 +163,10 @@ namespace YahooScraper.Controllers
 
             return RedirectToAction("ViewTable");
         }
+        public async Task<ActionResult> ViewTable()
+        {
+            return View(await db.StockTables.ToListAsync());
+        }
 
     }
 }
