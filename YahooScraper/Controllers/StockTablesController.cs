@@ -125,11 +125,11 @@ namespace YahooScraper.Controllers
             }
             base.Dispose(disposing);
         }
-             [Authorize]
+        //     [Authorize]
         public ActionResult Scrape()
         {
             ViewBag.scrapeStart = "Scraping Plase Wait...";
-
+            ViewBag.scrapeMethod = "HAP";
             YahooFinance webPage = new YahooFinance();
             List<List<string>> stockTable = webPage.Login();
 

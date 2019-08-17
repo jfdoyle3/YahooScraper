@@ -33,9 +33,6 @@
                     @Html.DisplayNameFor(model => model.ChgPc)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Currency)
-                </th>
-                <th>
                     @Html.DisplayNameFor(model => model.MarketTime)
                 </th>
                 <th>
@@ -47,7 +44,9 @@
                 <th>
                     @Html.DisplayNameFor(model => model.MarketCap)
                 </th>
-                <th></th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Method)
+                </th>
             </tr>
 
             @{
@@ -70,9 +69,6 @@
                             @ViewBag.stockTable[row][3]
                         </td>
                         <td>
-                            @ViewBag.stockTable[row][4]
-                        </td>
-                        <td>
                             @ViewBag.stockTable[row][5]
                         </td>
                         <td>
@@ -84,6 +80,7 @@
                         <td>
                             @ViewBag.stockTable[row][12]
                         </td>
+                            
                     </tr>
                 }
             }
