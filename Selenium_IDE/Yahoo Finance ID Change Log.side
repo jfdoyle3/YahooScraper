@@ -1,0 +1,182 @@
+{
+  "id": "3e68d19c-eb13-4631-b48c-cf68ced16ac1",
+  "version": "2.0",
+  "name": "Yahoo Finance ID Change Log",
+  "url": "https://finance.yahoo.com",
+  "tests": [{
+    "id": "8669e31b-89a7-4d71-b208-ae66890993e6",
+    "name": "Login  Aug 8th",
+    "commands": [{
+      "id": "5719deb5-2b2f-4a4e-b699-383ce911cf1c",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "340b0b2c-007f-4dc7-8fb5-a2e124b323f3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2f556f33-175a-4f1b-91e0-f7e9fc8755fa",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f4a8f7d0-23df-48ea-8cbd-c3c5704585fb",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=uh-signedin",
+      "targets": [
+        ["id=uh-signedin", "id"],
+        ["linkText=Sign in", "linkText"],
+        ["css=#uh-signedin", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign in')]", "xpath:link"],
+        ["xpath=//a[@id='uh-signedin']", "xpath:attributes"],
+        ["xpath=//ul[@id='uh-right']/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://login.yahoo.com/config/login?.intl=us&.lang=en-US&.src=finance&.done=https%3A%2F%2Ffinance.yahoo.com%2F')]", "xpath:href"],
+        ["xpath=//div[2]/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f21b6d74-93d2-44fe-ac62-d84e7d0214db",
+      "comment": "",
+      "command": "click",
+      "target": "id=uh-signedin",
+      "targets": [
+        ["id=uh-signedin", "id"],
+        ["linkText=Sign in", "linkText"],
+        ["css=#uh-signedin", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign in')]", "xpath:link"],
+        ["xpath=//a[@id='uh-signedin']", "xpath:attributes"],
+        ["xpath=//ul[@id='uh-right']/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://login.yahoo.com/config/login?.intl=us&.lang=en-US&.src=finance&.done=https%3A%2F%2Ffinance.yahoo.com%2F')]", "xpath:href"],
+        ["xpath=//div[2]/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "aa21ca79-0e95-4c16-aa27-e921ae15df2b",
+      "comment": "",
+      "command": "type",
+      "target": "name=passwd",
+      "targets": [
+        ["name=passwd", "name"],
+        ["css=.hide-passwd > input", "css:finder"],
+        ["xpath=//input[@name='passwd']", "xpath:attributes"],
+        ["xpath=//div[@id='username-country-code-field']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "m93Fe8YHn"
+    }, {
+      "id": "5306eca7-070f-446f-a2c9-b034ed748ded",
+      "comment": "",
+      "command": "click",
+      "target": "id=login-username",
+      "targets": [
+        ["id=login-username", "id"],
+        ["name=username", "name"],
+        ["css=#login-username", "css:finder"],
+        ["xpath=//input[@id='login-username']", "xpath:attributes"],
+        ["xpath=//div[@id='username-country-code-field']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fdace31e-8a54-4afe-ba20-cb92c49b19fc",
+      "comment": "",
+      "command": "type",
+      "target": "id=login-username",
+      "targets": [
+        ["id=login-username", "id"],
+        ["name=username", "name"],
+        ["css=#login-username", "css:finder"],
+        ["xpath=//input[@id='login-username']", "xpath:attributes"],
+        ["xpath=//div[@id='username-country-code-field']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "jfdoyle_iii"
+    }, {
+      "id": "7c1c0eee-41cd-477b-a0cc-c42599381bda",
+      "comment": "",
+      "command": "click",
+      "target": "id=login-signin",
+      "targets": [
+        ["id=login-signin", "id"],
+        ["name=signin", "name"],
+        ["css=#login-signin", "css:finder"],
+        ["xpath=//input[@id='login-signin']", "xpath:attributes"],
+        ["xpath=//form[@id='login-username-form']/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0cd9f6b2-d534-45de-b19b-3ed8aa715e21",
+      "comment": "",
+      "command": "type",
+      "target": "id=login-passwd",
+      "targets": [
+        ["id=login-passwd", "id"],
+        ["name=password", "name"],
+        ["css=#login-passwd", "css:finder"],
+        ["xpath=//input[@id='login-passwd']", "xpath:attributes"],
+        ["xpath=//div[@id='password-challenge']/form/input[7]", "xpath:idRelative"],
+        ["xpath=//input[7]", "xpath:position"]
+      ],
+      "value": "m93Fe8YHn"
+    }, {
+      "id": "5cbaad16-5cd1-42bb-b49d-9c204202940f",
+      "comment": "",
+      "command": "click",
+      "target": "id=login-signin",
+      "targets": [
+        ["id=login-signin", "id"],
+        ["name=verifyPassword", "name"],
+        ["css=#login-signin", "css:finder"],
+        ["xpath=//button[@id='login-signin']", "xpath:attributes"],
+        ["xpath=//div[@id='password-challenge']/form/p/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6e14cd70-50a7-472c-b31e-1357e97d0737",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a2987f55-ad6f-426d-9e4b-b0bee79ad68e",
+      "comment": "",
+      "command": "click",
+      "target": "css=*[data-test=\"list-name\"]",
+      "targets": [
+        ["css=*[data-test=\"list-name\"]", "css:data-attr"],
+        ["linkText=Stocks", "linkText"],
+        ["css=.Mt\\(5px\\):nth-child(1)", "css:finder"],
+        ["xpath=(//a[contains(text(),'Stocks')])[2]", "xpath:link"],
+        ["xpath=//div[@id='data-util-col']/section/header/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/portfolio/p_2/view')]", "xpath:href"],
+        ["xpath=//header/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "0d734f7a-c663-4904-a83a-82165179a76f",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["8669e31b-89a7-4d71-b208-ae66890993e6"]
+  }],
+  "urls": ["https://finance.yahoo.com/"],
+  "plugins": []
+}
