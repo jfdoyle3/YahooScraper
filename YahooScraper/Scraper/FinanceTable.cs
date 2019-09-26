@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Entity;
 using YahooScraper.Models;
 
-namespace YahooScraper
+namespace YahooScraper.Scraper
 {
    public class FinanceTable
     {
