@@ -251,16 +251,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HapStocks.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\HapStocks.Views.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\StockTable.cs">
       <DependentUpon>HapStocks.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Scraper\FinanceTable.cs" />
-    <Compile Include="Scraper\FromFile.cs" />
-    <Compile Include="Scraper\YahooFinance.cs" />
-    <Compile Include="Scraper\YahooSite.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -389,6 +386,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Scraper\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
