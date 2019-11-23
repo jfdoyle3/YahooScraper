@@ -231,33 +231,17 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\StockTablesController.cs" />
+    <Compile Include="Controllers\StockTablesControllerOld.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\HapStocks.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HapStocks.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\HapStocks.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HapStocks.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\HapStocks.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HapStocks.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\HapStocks.Views.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\StockTable.cs">
-      <DependentUpon>HapStocks.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scraper\HAPDB.cs" />
+    <Compile Include="Scraper\HAPScrape.cs" />
+    <Compile Include="Scraper\RestSharpAPI.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -271,16 +255,6 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\HapStocks.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>HapStocks.edmx</DependentUpon>
-      <LastGenOutput>HapStocks.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\HapStocks.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>HapStocks.edmx</DependentUpon>
-      <LastGenOutput>HapStocks.cs</LastGenOutput>
-    </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -303,13 +277,6 @@
     <Content Include="Scripts\esm\popper.js.map" />
     <Content Include="Scripts\esm\popper-utils.min.js.map" />
     <Content Include="Scripts\esm\popper-utils.js.map" />
-    <EntityDeploy Include="Models\HapStocks.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>HapStocks.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\HapStocks.edmx.diagram">
-      <DependentUpon>HapStocks.edmx</DependentUpon>
-    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -375,18 +342,13 @@
     <Content Include="Views\Shared\_HeaderNavBar.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\StockTables\Create.cshtml" />
-    <Content Include="Views\StockTables\Delete.cshtml" />
-    <Content Include="Views\StockTables\Details.cshtml" />
-    <Content Include="Views\StockTables\Edit.cshtml" />
-    <Content Include="Views\StockTables\Index.cshtml" />
-    <Content Include="Views\StockTables\History.cshtml" />
-    <Content Include="Views\StockTables\Scrape.cshtml" />
-    <Content Include="Views\StockTables\ViewTable.cshtml" />
+    <Content Include="Views\StockTablesOld\Index.cshtml" />
+    <Content Include="Views\StockTablesOld\History.cshtml" />
+    <Content Include="Views\StockTablesOld\Scrape.cshtml" />
+    <Content Include="Views\StockTablesOld\ViewTable.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Scraper\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

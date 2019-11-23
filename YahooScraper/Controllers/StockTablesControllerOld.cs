@@ -12,7 +12,7 @@ using YahooScraper.Scraper;
 
 namespace YahooScraper.Controllers
 {
-    public class StockTablesController : Controller
+    public class StockTablesControllerOld : Controller
     {
         private HapStocksContext db = new HapStocksContext();
 
