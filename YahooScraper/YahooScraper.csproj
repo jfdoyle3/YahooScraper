@@ -239,9 +239,9 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Scraper\HAPDB.cs" />
-    <Compile Include="Scraper\HAPScrape.cs" />
-    <Compile Include="Scraper\RestSharpAPI.cs" />
+    <Compile Include="HAP\HAPDB.cs" />
+    <Compile Include="HAP\HAPScrape.cs" />
+    <Compile Include="RestSharp\RestSharpAPI.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
