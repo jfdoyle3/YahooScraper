@@ -1,42 +1,38 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
-using System.Data.Entity.;
-using 
+using System.Data.SqlClient;
 
-namespace YahooScraper
+namespace RestSharpEntity
 {
     public class EntityWrite
     {
         public static void WriteDB(JArray rsStocks)
         {
             string type = "RS";
-            
+
             Console.Write("Open\n");
-            // using (SqlConnection connection = new SqlConnection(connectionString))
-             using (RestSharpContext)
+            using (RestSharpStockContext db = new RestSharpStockContext())
             {
                 foreach (JToken stock in rsStocks)
                 {
-                   // connection.Open();
+                    RestSharpStock restSharpStock = new RestSharpStock
+                    {
 
-                    SqlCommand insertStatement = new SqlCommand("INSERT into [RestSharpStocks] (DateStamp, Symbol, Change, MarketTime, ChgPct, Price, Closing, Method) VALUES (@DateStamp, @Symbol, @Change, @MarketTime, @ChgPct, @Price, @Closing, @Method)", connection);
-                    // SqlCommand insertStatement = new SqlCommand("INSERT into [ScrapedStocks] (DateStamp, Symbol, Change, MarketTime, ChgPct, Price, Closing, Method) VALUES (@DateStamp, @Symbol, @Change, @MarketTime, @ChgPct, @Price, @Closing, @Method)", connection);
-
-                    insertStatement.Parameters.AddWithValue("@DateStamp", DateTime.Now.ToString());
-                    insertStatement.Parameters.AddWithValue("@Symbol", stock["symbol"].ToString());
-                    insertStatement.Parameters.AddWithValue("@Change", stock["regularMarketChange"]["fmt"].ToString());
-                    insertStatement.Parameters.AddWithValue("@MarketTime", stock["regularMarketTime"]["fmt"].ToString());
-                    insertStatement.Parameters.AddWithValue("@ChgPct", stock["regularMarketChangePercent"]["fmt"].ToString());
-                    insertStatement.Parameters.AddWithValue("@Price", stock["regularMarketPrice"]["fmt"].ToString());
-                    insertStatement.Parameters.AddWithValue("@Closing", stock["regularMarketPreviousClose"]["fmt"].ToString());
-                    insertStatement.Parameters.AddWithValue("@Method", type);
-
-                    insertStatement.ExecuteNonQuery();
-                    connection.Close();
+                        DateStamp = DateTime.Now,
+                        Symbol = stock["symbol"].ToString(),
+                        Change = stock["regularMarketChange"]["fmt"].ToString(),
+                        MarketTime = stock["regularMarketTime"]["fmt"].ToString(),
+                        ChgPct = stock["regularMarketChangePercent"]["fmt"].ToString(),
+                        Price = stock["regularMarketPrice"]["fmt"].ToString(),
+                        Closing = stock["regularMarketPreviousClose"]["fmt"].ToString(),
+                        Method = type,
+                    };
+                    db.RestSharpStocks.Add(restSharpStock);
+                    db.SaveChanges();
                 }
-
-                Console.WriteLine("Database: Written and Closed");
             }
+
+            Console.WriteLine("Database: Written and Closed");
         }
     }
 }
