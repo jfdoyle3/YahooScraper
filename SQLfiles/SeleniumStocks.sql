@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[StockTable] (
+﻿CREATE TABLE [dbo].[SeleniumStocks] (
     [ID]         INT           NOT NULL IDENTITY,
     [DateStamp]  DateTime  NULL,
     [Symbol]     NVARCHAR (50) NULL,
@@ -11,5 +11,5 @@
     [MarketCap]  NVARCHAR (50) NULL,
     [Method]  NVARCHAR (50) NULL,
 
-    CONSTRAINT [PK_StockTable] PRIMARY KEY CLUSTERED ([ID] ASC)
+    CONSTRAINT [PK_SeleniumStocks] PRIMARY KEY CLUSTERED ([ID] ASC)
 );
