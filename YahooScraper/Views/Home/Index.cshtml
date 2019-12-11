@@ -1,18 +1,22 @@
 ﻿@{
     ViewBag.Title = "Yahoo Scraper Portal Page";
 }
+    <head>
+        <link rel="stylesheet" href="index.css" type="text/css" />
+
+    </head>
 
 <div class="jumbotron">
-   <h1 style="text-align:center">Yahoo Financial Scraper</h1>
+    <h1>Financial Scraper</h1>
 </div>
 
 <div class="row">
     <div style="margin: 0 auto; width: 656px; text-align: center;">
 
-       <div class="container">
-    <input type="submit" class="btn btn-secondary" value="Scrape" onclick="location.href='@Url.Action("Scrape","StockTables")'" />
-    <input type="submit" class="btn btn-secondary" value="History" onclick="location.href='@Url.Action("History","StockTables")'" />
-</div>
+        <div class="container">
+            <input type="submit" class="btn btn-secondary" value="Scrape" onclick="location.href='@Url.Action("Scrape","StockTables")'" />
+            <input type="submit" class="btn btn-secondary" value="History" onclick="location.href='@Url.Action("History","StockTables")'" />
+        </div>
 
     </div>
 </div>
