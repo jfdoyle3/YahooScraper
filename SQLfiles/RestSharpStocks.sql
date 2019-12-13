@@ -1,5 +1,5 @@
 ﻿CREATE TABLE [dbo].[RestSharpStocks] (
-    [Id]         INT           IDENTITY (1, 1) NOT NULL,
+    [ID]         INT           IDENTITY (1, 1) NOT NULL,
     [DateStamp]  DATETIME2 (7) NULL,
     [Symbol]     NVARCHAR (50) NULL,
     [Change]     NVARCHAR (50) NULL,

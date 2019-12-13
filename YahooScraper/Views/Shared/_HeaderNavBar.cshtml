@@ -1,14 +1,14 @@
 ﻿<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
         @Html.ActionLink("Yahoo Scraper", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-       
+
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav mr-auto">
                 <li class="nav-item">@Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link" })</li>
                 <li class="nav-item">@Html.ActionLink("About", "About", "Home", null, new { @class = "nav-link" })</li>
                 <li class="nav-item">@Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "nav-link" })</li>
                 @*<li class="nav-item">@Html.ActionLink("Scrape", "Scrape", "StockTables", null, new { @class = "nav-link" })</li>
-                <li class="nav-item">@Html.ActionLink("History", "History", "StockTables", null, new { @class = "nav-link" })</li>*@
+                    <li class="nav-item">@Html.ActionLink("History", "History", "StockTables", null, new { @class = "nav-link" })</li>*@
                 <li class="nav-item dropdown">
             </ul>
             @Html.Partial("_LoginPartial")

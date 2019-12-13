@@ -44,7 +44,7 @@
 //        }
 
 //        // POST: StockTables/Create
-//        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+//        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
 //        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
 //        [HttpPost]
 //        [ValidateAntiForgeryToken]
@@ -76,7 +76,7 @@
 //        }
 
 //        // POST: StockTables/Edit/5
-//        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+//        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
 //        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
 //        [HttpPost]
 //        [ValidateAntiForgeryToken]
@@ -133,7 +133,6 @@
 //            YahooFinance webPage = new YahooFinance();
 //            List<List<string>> stockTable = webPage.Login();
 
-
 //            //FromFile scrape = new FromFile();
 //            //List<List<string>> stockTable = scrape.ReadFile();
 
@@ -153,7 +152,6 @@
 //            return View(await db.StockTables.ToListAsync());
 //        }
 
-
 //        public ActionResult Reset()
 //        {
 //            string query = "DELETE FROM StockTable;" +
@@ -170,4 +168,3 @@
 
 //    }
 //}
-

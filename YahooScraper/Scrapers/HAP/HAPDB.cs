@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.Sql;
-using System.Data.SqlClient;
-
-namespace YahooScraper
+﻿namespace YahooScraper
 {
     public class HAPDB
     {
@@ -37,7 +29,6 @@ namespace YahooScraper
         //            insertStatement.Parameters.AddWithValue("@MarketCap", stockData[i][12].ToString());
         //            insertStatement.Parameters.AddWithValue("@Method", type);
 
-                    
         //            insertStatement.ExecuteNonQuery();
         //            connection.Close();
         //        }

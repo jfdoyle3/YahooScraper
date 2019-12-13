@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
-using System.Data.SqlClient;
+using System.Data.Entity
 
 namespace RestSharpEntity
 {
@@ -11,13 +11,12 @@ namespace RestSharpEntity
             string type = "RS";
 
             Console.Write("Open\n");
-            using (RestSharpStockContext db = new RestSharpStockContext())
+            using (RestSharpStocksContext db = new RestSharpStockContext())
             {
                 foreach (JToken stock in rsStocks)
                 {
                     RestSharpStock restSharpStock = new RestSharpStock
                     {
-
                         DateStamp = DateTime.Now,
                         Symbol = stock["symbol"].ToString(),
                         Change = stock["regularMarketChange"]["fmt"].ToString(),

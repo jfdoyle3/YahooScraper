@@ -2,6 +2,7 @@
 using Owin;
 
 [assembly: OwinStartupAttribute(typeof(YahooScraper.Startup))]
+
 namespace YahooScraper
 {
     public partial class Startup

@@ -1,0 +1,10 @@
+Entity:
+
+Rest Sharp:
+
+RestSharpScraper.edmx
+RestSharpScraper.Context.tt
+RestSharpScraper
+RestSharpStocks
+
+HAP:
