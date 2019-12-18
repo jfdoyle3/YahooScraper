@@ -1,8 +1,9 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
-using System.Data.Entity
+using System.Data.Entity;
+using YahooScraper.Models;
 
-namespace RestSharpEntity
+namespace YahooScraper
 {
     public class EntityWrite
     {
@@ -11,11 +12,11 @@ namespace RestSharpEntity
             string type = "RS";
 
             Console.Write("Open\n");
-            using (RestSharpStocksContext db = new RestSharpStockContext())
+            using (RestSharpStocksContext db = new RestSharpStocksContext())
             {
                 foreach (JToken stock in rsStocks)
                 {
-                    RestSharpStock restSharpStock = new RestSharpStock
+                    RestSharpStock restSharpStock=new RestSharpStock
                     {
                         DateStamp = DateTime.Now,
                         Symbol = stock["symbol"].ToString(),
