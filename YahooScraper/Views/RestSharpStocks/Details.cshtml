@@ -1,0 +1,83 @@
+﻿@model YahooScraper.Models.RestSharpStock
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>RestSharpStock</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DateStamp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateStamp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Symbol)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Symbol)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Change)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Change)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MarketTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MarketTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChgPct)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChgPct)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Closing)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Closing)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Method)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Method)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
