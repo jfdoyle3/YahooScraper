@@ -127,7 +127,7 @@ namespace YahooScraper.Controllers
         }
         public ActionResult HAPScrape()
         {
-            ViewBag.scrapeStart = "Scraping Plase Wait...";
+            ViewBag.scrapeStart = "Scraping Please Wait...";
             ViewBag.scrapeMethod = "HAP";
             H  webPage = new YahooFinance();
             List<List<string>> stockTable = webPage.Login();
