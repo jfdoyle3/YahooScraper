@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
 using System.Threading.Tasks;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
 using YahooScraper.Models;
-using YahooScraper.Scrapers;
 
 namespace YahooScraper.Controllers
 {
@@ -129,7 +124,7 @@ namespace YahooScraper.Controllers
         {
             ViewBag.scrapeStart = "Scraping Please Wait...";
             ViewBag.scrapeMethod = "HAP";
-            H  webPage = new YahooFinance();
+            YahooFinance webPage = new YahooFinance();
             List<List<string>> stockTable = webPage.Login();
 
             //FromFile scrape = new FromFile();
@@ -138,7 +133,7 @@ namespace YahooScraper.Controllers
             ViewBag.stockTable = stockTable;
             ViewBag.scrapeDone = "Done";
 
-            FinanceTable.ScrapeToDatabase(stockTable);
+            //FinanceTable.ScrapeToDatabase(stockTable);
 
             //int maxId = db.StockTables.Max(p => p.ID);
 
@@ -148,7 +143,7 @@ namespace YahooScraper.Controllers
         }
         public async Task<ActionResult> History()
         {
-            return View(await db.StockTables.ToListAsync());
+            return View(await db.HAPStocks.ToListAsync());
         }
 
         public ActionResult Reset()
@@ -162,7 +157,7 @@ namespace YahooScraper.Controllers
         }
         public async Task<ActionResult> ViewTable()
         {
-            return View(await db.StockTables.ToListAsync());
+            return View(await db.HAPStocks.ToListAsync());
         }
 
     }
