@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ConsoleScraper
+namespace YahooScraper
 {
     public class YahooFinance
     {

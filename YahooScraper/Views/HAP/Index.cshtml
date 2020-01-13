@@ -1,16 +1,15 @@
-﻿@*@model IEnumerable<YahooScraper.Models.StockTable>
+﻿@model IEnumerable<YahooScraper.Models.HAPStock>
 
 @{
-    ViewBag.Title = "ViewTable";
+    ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Stock Scraped Data</h2>
-<div class="container">
-    <input type="submit" class="btn btn-secondary" value="Scrape" onclick="location.href='@Url.Action("Scrape","StockTables")'" />
-    <input type="submit" class="btn btn-secondary" value="History" onclick="location.href='@Url.Action("History","StockTables")'" />
-</div>
-<hr />
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
 <table class="table">
     <tr>
         <th>
@@ -46,8 +45,7 @@
         <th></th>
     </tr>
 
-    @foreach (var item in Model)
-    {
+@foreach (var item in Model) {
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.DateStamp)
@@ -79,6 +77,12 @@
         <td>
             @Html.DisplayFor(modelItem => item.Method)
         </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
     </tr>
-    }
-</table>*@
+}
+
+</table>

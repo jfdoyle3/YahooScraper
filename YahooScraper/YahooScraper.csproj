@@ -237,6 +237,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HAPController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\RestSharpStocksController.cs" />
@@ -245,6 +246,24 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\HAP.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HAP.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HAP.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HAP.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HAP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HAP.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HAPStock.cs">
+      <DependentUpon>HAP.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\RestSharpScraper.Context.cs">
@@ -283,6 +302,16 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\HAP.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>HAP.edmx</DependentUpon>
+      <LastGenOutput>HAP.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\HAP.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>HAP.edmx</DependentUpon>
+      <LastGenOutput>HAP.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\RestSharpScraper.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>RestSharpScraper.edmx</DependentUpon>
@@ -322,6 +351,13 @@
     </EntityDeploy>
     <Content Include="Models\RestSharpScraper.edmx.diagram">
       <DependentUpon>RestSharpScraper.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\HAP.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>HAP.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\HAP.edmx.diagram">
+      <DependentUpon>HAP.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -461,6 +497,11 @@
     <Content Include="Views\RestSharpStocks\Details.cshtml" />
     <Content Include="Views\RestSharpStocks\Edit.cshtml" />
     <Content Include="Views\RestSharpStocks\Index.cshtml" />
+    <Content Include="Views\HAP\Create.cshtml" />
+    <Content Include="Views\HAP\Delete.cshtml" />
+    <Content Include="Views\HAP\Details.cshtml" />
+    <Content Include="Views\HAP\Edit.cshtml" />
+    <Content Include="Views\HAP\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
